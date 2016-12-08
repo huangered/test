@@ -20,6 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 Route::get('/video','VideoController@index');
 Route::get('/video/{filename}', function ($filename) {
+    \Log::info("hello");
     // Pasta dos videos.
     $videosDir = base_path('resources/assets/videos');
     if (file_exists($filePath = $videosDir."/".$filename)) {
